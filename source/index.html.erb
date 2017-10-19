@@ -1,23 +1,211 @@
 ---
-title: Welcome to Middleman
+title: One Nation. One Appeal.
 ---
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" class="middleman-logo" aria-labelledby="middleman-logo__title" role="img">
-  <title id="middleman-logo__title">Middleman</title>
-  <path class="middleman-logo__top-left-bar" fill-opacity=".45" d="M0 40L200 0v30L0 60z"/>
-  <path class="middleman-logo__top-right-bar" fill="#fff" d="M200 0l200 40v20L200 30z"/>
-  <path class="middleman-logo__left-m" fill-opacity=".45" d="M0 78v184l45 5V152l45 83 47-83v129l53 7V52l-57 8-43 83-43-70z"/>
-  <path class="middleman-logo__right-m" fill="#fff" d="M400 78v184l-45 5V152l-45 83-47-83v129l-53 7V52l57 8 43 83 43-70z"/>
-  <path class="middleman-logo__bottom-left-bar" fill-opacity=".45" d="M0 300l200 40v-30L0 280z"/>
-  <path class="middleman-logo__bottom-right-bar" fill="#fff" d="M200 340l200-40v-20l-200 30z"/>
-</svg>
-
-<h1>
-  Middleman is Running
-</h1>
-
-<%= link_to(
-  "Read Documentation",
-  "https://middlemanapp.com/basics/templating_language/",
-  target: "_blank"
-) %>
+<nav class="nav" id="nav">
+  <div class="menu-mobile">Menu</div>
+  <div class="menubar" role="menubar">
+    <div class="logo-view">
+      <img class="logo" src="images/logo_with_text.png" alt="TBD">
+    </div>
+    <a class="menuitem" role="menuitem" href="#start">Home</a>
+    <a class="menuitem" role="menuitem" href="#harvey">Harvey</a>
+    <a class="menuitem" role="menuitem" href="#faqs">FAQs</a>
+    <a class="menuitem" role="menuitem" href="#donations">Donate now</a>
+  </div>
+</nav>
+<div class="presidents-wrapper no-lineheight" id="start">
+  <picture class="president">
+    <source media="(min-width: 1000px)" srcset="images/presidents_1000.webp, images/presidents_1400.webp 1.5x, images/presidents_2000.webp 2x" type="image/webp">
+    <source media="(min-width: 700px)" srcset="images/presidents_700.webp, images/presidents_1000.webp 1.5x, images/presidents_1400.webp 2x" type="image/webp">
+    <source srcset="images/presidents_350.webp, images/presidents_700.webp 2x" type="image/webp">
+    <source media="(min-width: 1000px)" srcset="images/presidents_1000.jpg, images/presidents_1400.jpg 1.5x" type="image/jpeg">
+    <source media="(min-width: 700px)" srcset="images/presidents_700.jpg, images/presidents_1000.jpg 1.5x, images/presidents_1400.jpg 2x" type="image/jpeg">
+    <img alt="The former Presidents invite you to help those in need." src="images/presidents_1400.jpg" srcset="images/presidents_350.jpg, images/presidents_700.jpg 2x">
+  </picture>
+  <div class="logo-wrapper">
+    <div class="logo-and-donations">
+      <img alt="One America Appeal for Hurricane Relief" class="logo" src="images/logo_with_text.png"> <a class="button donation-button" href="index.html#donations">Donate now</a>
+    </div>
+  </div>
+</div>
+<div class="gap" id="donations">
+  <div class="container donations">
+    <h1>Donate to the One America Appeal</h1>
+    <p>Hurricanes Harvey, Irma and Maria have brought terrible devastation&mdash; but also brought out the best in humanity. As former Presidents, we wanted to come together to help our fellow citizens in Texas, Florida and the Caribbean as they recover and rebuild.</p>
+    <p>Please give whatever you can. Every cent donated through the One America Appeal will help the victims recover. Thank you.</p>
+    <div class="video-and-donorbox">
+      <div class="donorbox-container">
+        <!--[if lte IE 9]><p>This site has been built for Google Chrome, Safari, Firefox, and Internet Exploer 10+. Please update your browser to ensure we can process your donation properly.</p><![endif]-->
+        <form class="donation-form" id="donation-form" name="donation-form">
+          <h3>Select an amount to donate</h3>
+          <div class="donation-form-block">
+            <button class="donation-submit button" data-donation-amount="25">$25.00</button> <button class="donation-submit button" data-donation-amount="50">$50.00</button> <button class="donation-submit button" data-donation-amount="100">$100.00</button> <button class="donation-submit button" data-donation-amount="250">$250.00</button> <button class="donation-submit button" data-donation-amount="500">$500.00</button>
+          </div>
+          <div class="donation-form__donation-wrapper">
+            <input class="donation-form__donation" id="donation-form__donation" required="" type="number">
+            <div class="donation-form__dollar">
+              $
+            </div>
+          </div>
+          <div class="donation-form-cover-costs donation-form-block">
+            <label class="label-cbx" for="donation-form__cover-costs"><input checked="checked" class="invisible" id="donation-form__cover-costs" type="checkbox"></label>
+            <div class="checkbox">
+              <label class="label-cbx" for="donation-form__cover-costs"><svg height="20px" viewbox="0 0 20 20" width="20px">
+              <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+              <polyline points="4 11 8 15 16 6"></polyline></svg></label>
+            </div><label class="label-cbx" for="donation-form__cover-costs"><span>Optionally cover processing fee (<span id="donation-form__fee">2.2% + $0.30</span>).</span></label>
+          </div>
+          <div class="donation-form__designation-wrapper donation-form-block">
+            <select id="donation-form__designation">
+              <option default="" value="both">
+                Recovery from Hurricanes Harvey, Irma and Maria
+              </option>
+              <option value="harvey">
+                Only Harvey (Texas)
+              </option>
+              <option value="irma">
+                Only Irma (Florida)
+              </option>
+              <option value="maria">
+                Only Maria (Puerto Rico/USVI)
+              </option>
+              <option value="maria-pr">
+                Only Maria (Puerto Rico only)
+              </option>
+              <option value="maria-usvi">
+                Only Maria (USVI only)
+              </option>
+            </select><label class="small" for="donation-form__designation">If you wish to designate which hurricane recovery effort your donation will assist, please specify that above.</label>
+          </div>
+          <div class="donation-form__match-wrapper donation-form-block">
+            <input id="donation-form__match" placeholder="Company for donation matching" type="text"><label class="small" for="donation-form__match">If your company does donation matching, please add them here</label>
+          </div><button class="donation-submit-other button" id="donation-form__submit">Donate now</button>
+        </form>
+      </div>
+      <div class="video-container">
+        <div class="video-wrapper">
+          <iframe allowfullscreen frameborder="0" src="https://www.youtube.com/embed/3-yzNjKVeVo?rel=0&amp;controls=1&amp;showinfo=0"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="social-buttons">
+      <a class="twitter-intent button" href="https://twitter.com/intent/tweet?text=Donate%20to%20the%20One%20America%20Appeal%20to%20help%20the%20millions%20impacted%20during%20this%20catastrophic%20hurricane%20season.%20https%3A%2F%2Fwww.oneamericaappeal.org%2F&hashtags=OneAmericaAppeal" target=""><img src="images/social/twitter.svg"> Tweet</a> <a class="facebook-share button" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.oneamericaappeal.org"><img src="images/social/facebook.png"> Share</a>
+    </div>
+  </div>
+</div>
+<div class="jarallax">
+  <picture>
+    <source media="(min-width: 1080px)" srcset="images/houston-chronicle-harvey-houses_1080.webp, images/houston-chronicle-harvey-houses_1440.webp 1.5x" type="image/webp">
+    <source media="(min-width: 720px)" srcset="images/houston-chronicle-harvey-houses_720.webp, images/houston-chronicle-harvey-houses_1080.webp 1.5x, images/houston-chronicle-harvey-houses_1440.webp 2x" type="image/webp">
+    <source srcset="images/houston-chronicle-harvey-houses_360.webp, images/houston-chronicle-harvey-houses_720.webp 2x" type="image/webp">
+    <source media="(min-width: 1080px)" srcset="images/houston-chronicle-harvey-houses_1080.jpg, images/houston-chronicle-harvey-houses_1440.jpg 1.5x" type="image/jpeg">
+    <source media="(min-width: 720px)" srcset="images/houston-chronicle-harvey-houses_720.jpg, images/houston-chronicle-harvey-houses_1080.jpg 2x, images/houston-chronicle-harvey-houses_1440.jpg 2x" type="image/jpeg">
+    <img alt="The country is coming together to help the victims." class="jarallax-img" src="images/houston-chronicle-harvey-houses_1440.jpg" srcset="images/houston-chronicle-harvey-houses_360.jpg, images/houston-chronicle-harvey-houses_720.jpg 2x">
+  </picture>
+  <figcaption>
+    Houses flooded from Hurrican Harvey. Courtesy of the <a href="http://www.chron.com/" target="_blank">Houston Chronicle</a>.
+  </figcaption>
+</div>
+<div class="gap" id="harvey">
+  <div class="container about">
+    <h1>Hurricane Harvey: By the Numbers</h1>
+    <p>Every storm is unique, but a look at Hurricane Harvey's unprecedented intensity helps explain why the One America Appeal came to life.</p>
+    <div class="about--container">
+      <img src="images/icons-01.png">
+      <p>According to the National Weather Service, Harvey dropped a total 51.88 inches of rain near Mont Belvieu just east of Houston. No other storm in recorded history has dropped more rain on the continental United States.</p>
+    </div>
+    <div class="about--container">
+      <img src="images/icons-02.png">
+      <p>Before Harvey, the highest ANNUAL rainfall recorded at George Bush Intercontinental Airport north of downtown Houston was 49.77 inches.</p>
+    </div>
+    <div class="about--container">
+      <img src="images/icons-03.png">
+      <p>Some estimates are that Harvey dumped 27 trillion gallons on land, which according to the Houston Chronicle is enough to fill the Astrodome 86,000 times.</p>
+    </div>
+    <div class="about--container">
+      <img src="images/icons-04.png">
+      <p>Research by the Washington Post suggests that, if Hurricane Harvey’s precipitation was confined only to where rain fell during Hurricane Katrina in 2005, it would be 128 feet deep.</p>
+    </div><a class="button donation-button" href="index.html#donations">Donate now</a>
+  </div>
+</div>
+<div class="jarallax">
+  <picture>
+    <source media="(min-width: 1080px)" srcset="images/hurricane-irma_1080.webp, images/hurricane-irma_1440.webp 1.5x" type="image/webp">
+    <source media="(min-width: 720px)" srcset="images/hurricane-irma_720.webp, images/hurricane-irma_1080.webp 1.5x, images/hurricane-irma_1440.webp 2x" type="image/webp">
+    <source srcset="images/hurricane-irma_360.webp, images/hurricane-irma_720.webp 2x" type="image/webp">
+    <source media="(min-width: 1080px)" srcset="images/hurricane-irma_1080.jpg, images/hurricane-irma_1440.jpg 1.5x" type="image/jpeg">
+    <source media="(min-width: 720px)" srcset="images/hurricane-irma_720.jpg, images/hurricane-irma_1080.jpg 2x, images/hurricane-irma_1440.jpg 2x" type="image/jpeg">
+    <img alt="The country is coming together to help the victims." class="jarallax-img" src="images/hurricane-irma_1440.jpg" srcset="images/hurricane-irma_360.jpg, images/hurricane-irma_720.jpg 2x" style="z-index:-40">
+  </picture>
+  <figcaption>
+    Damage of Hurricane Irma. Courtesy of the State of Florida
+  </figcaption>
+</div>
+<div class="gap grey-background" id="faqs">
+  <div class="container">
+    <h1>FAQs</h1>
+    <h3>What is the One America Appeal?</h3>
+    <p>The One America Appeal is a joint appeal that was originally launched by all five living former American Presidents to encourage their fellow citizens to support recovery efforts from Hurricane Harvey — which inundated the Texas Gulf Coast with unprecedented flooding. This special appeal has been expanded to include areas most affected by Hurricanes Irma and Maria.</p>
+    <h3>If I make a donation today, where does my money go?</h3>
+    <p>Unless you choose otherwise when making your online donation, all donations made today will go to help victims of Hurricane Harvey in Texas, Hurricane Irma in Florida, and Hurricane Maria in Puerto Rico and the U.S. Virgin Islands. In Texas, monies will go to the Hurricane Harvey Relief Fund focusing on the greater Houston region, and the Rebuild Texas Fund assisting communities across the state. In Florida, monies will go to the Florida Disaster Fund, which is the state’s official private fund to assist the state’s communities as they respond to and recover from destructive storms. In the Caribbean, donations will be distributed to Unidos Por Puerto Rico launched by the office of First Lady Beatriz Rosselló together with private sector coalition; and the Fund for the Virgin Islands which was established 25 years ago by the Community Foundation of the Virgin Islands for relief efforts.</p>
+    <h3>Can I mail a check?</h3>
+    <p>Yes. Checks to the One America Appeal may be mailed to:</p>
+    <p class="indent">GBPLF One America Appeal<br>
+    Post Office Box 14141<br>
+    College Station, Texas 77841-4141</p>
+    <p class="indent"><a href="mailto:oneamerica@bush41.org">oneamerica@bush41.org</a></p>
+    <p class="indent">*Checks should be payable to "GBPLF One America Appeal"</p>
+    <h3>Is the One America Appeal a new fund?</h3>
+    <p>No. All funds collected through the One America Appeal will go into a special account at the George H. W. Bush Presidential Library Foundation, a tax-exempt 501(c)(3) organization, to ensure 100 cents out of every dollar donated goes to hurricane recovery. All monies collected will be distributed immediately to the designated recovery funds. All donations are also tax-deductible.</p>
+    <h3>Are public tax dollars involved in this project?</h3>
+    <p>No. This is a private effort led by distinguished private citizens to raise private dollars that will supplement ongoing relief and recovery efforts underway at all levels of government.</p>
+    <h3>What if I wish to make a donation through a donor-advised fund?</h3>
+    <p>The following information is required to make such a gift:</p>
+    <p class="indent">EIN: 76-0345781<br>
+    Contact Name: Gary Booth<br>
+    Phone Number: 979-862-2251</p>
+    <h3>What if I didn't receive a receipt?</h3>
+    <p>All receipts are sent via email from noreply@oneamericaappeal.org. Please check your spam folder. We are currently experiencing issues with emails to @comcast.net. If you have been using an email from Comcast, kindly email us at oneamerica@bush41.org with your original email and a non-comcast email we can send the receipt to.</p>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="address">
+      <h3>GBPLF One America Appeal</h3>
+      <p>Post Office Box 14141, College Station, Texas 77841-4141</p>
+      <p><a href="mailto:oneamerica@bush41.org">oneamerica@bush41.org</a></p>
+    </div>
+  </div>
+  <div class="footer--copyright">
+    <div class="container">
+      <p>Copyright 2017 <a href="https://bush41.org/" target="_blank">George H. W. Bush Presidential Library Foundation</a></p>
+    </div>
+  </div>
+</footer>
+<div class="modal-window" id="modal-window">
+  <div class="modal-wrapper">
+    <div class="error" id="modal_error" style="display:none">
+      <h2>There seems to be an error processing your card</h2>
+      <p>This may be due to your card being declined, or the card number and billing address being incorrect.</p>
+      <p>Double check your card information, and try again in a minute.</p><!--[if IE 9]><p>This site was built for all major browser and Intenet Explorer 10+</p><![endif]-->
+    </div>
+    <div class="error" id="modal_success" style="display:block">
+      <h2>Thank you for your kind donation!</h2>
+      <p>Help us raise funds for those affected by this great tragedy by sharing with your friends and family.</p>
+      <div class="social-buttons">
+        <a class="twitter-intent button" href="https://twitter.com/intent/tweet?text=Donate%20to%20the%20One%20America%20Appeal%20to%20help%20the%20millions%20impacted%20during%20this%20catastrophic%20hurricane%20season.%20https%3A%2F%2Fwww.oneamericaappeal.org%2F&hashtags=OneAmericaAppeal" target=""><img src="images/social/twitter.svg"> Tweet</a> <a class="facebook-share button" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.oneamericaappeal.org"><img src="images/social/facebook.png"> Share</a>
+      </div>
+    </div>
+    <div class="button close-modal">
+      Close
+    </div>
+  </div>
+</div>
+<script async src="https://www.google-analytics.com/analytics.js">
+</script>
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-105989852-1', 'auto');
+  ga('send', 'pageview', {transport: 'beacon'});
+</script>

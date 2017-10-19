@@ -1,16 +1,32 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
-  </head>
-  <body>
-    <%= yield %>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <title><%= current_page.data.title || "One Nation. One Appeal." %></title>
+  <link href="/" rel="canonical">
+  <meta content="" name="description">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="One Nation. One Appeal." property="og:title">
+  <meta content="website" property="og:type">
+  <meta content="This catastrophic hurricane season has brought tremendous destruction to our country and people, but also brought out the best in the American spirit. Donate to the One America Appeal to help the millions who have been impacted." property="og:description">
+  <meta content="https://www.oneamericaappeal.org/" property="og:url">
+  <meta content="https://www.oneamericaappeal.org/images/social/share_new.jpg" property="og:image">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="One Nation. One Appeal." name="twitter:title">
+  <meta content="This catastrophic hurricane season has brought tremendous destruction to our country and people, but also brought out the best in the American spirit. Donate to the One America Appeal to help the millions who have been impacted." name="twitter:description">
+  <meta content="https://www.oneamericaappeal.org/images/social/share_new.jpg" name="twitter:image">
+  <script>
+  var OneAmericaSettngs = {
+  'stripe_api_url':'https://backend.oneamericaappeal.org/donate',
+  'stripe_api_pub_key': 'pk_live_9EbtgYUT8Hi35pVBgnU1ZFD6'
+  };
+  </script>
+  <%= stylesheet_link_tag "site" %>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+</head>
+<body>
+  <%= yield %>
+  <%= javascript_include_tag "site" %>
+</body>
 </html>
