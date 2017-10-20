@@ -102,7 +102,7 @@ h5,
 h6 {
   font-family: "Roboto Condensed", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   font-weight: 700;
-  color: #632424
+  color: #db6251
 }
 
 h1 {
@@ -131,7 +131,7 @@ h1 {
 }
 
 h1:after {
-  background: #632424;
+  background: #db6251;
   bottom: -10px;
   content: "";
   display: block;
@@ -236,7 +236,7 @@ a:hover {
 }
 
 .nav {
-  background-color: #632424;
+  background-color: #db6251;
   height: 34px;
   text-align: right;
   position: fixed;
@@ -268,7 +268,7 @@ a:hover {
     transition: height .5s;
     height: 0;
     overflow: hidden;
-    background-color: #632424;
+    background-color: #db6251;
     position: relative
   }
   .nav .logo-view {
@@ -388,7 +388,7 @@ a:hover {
 .button,
 a.button,
 button {
-  background-color: #982a29;
+  background-color: #4c868f;
   border-radius: 5px;
   padding: .3em .8em;
   color: #fff;
@@ -508,7 +508,7 @@ button.twitter-intent {
 
 .label-cbx .checkbox svg path {
   fill: none;
-  stroke: #982a29;
+  stroke: #4c868f;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -601,7 +601,7 @@ button.twitter-intent {
 }
 
 .footer {
-  background-color: #982a29;
+  background-color: #4c868f;
   color: #fff;
   padding-top: 1em;
   text-align: center
@@ -637,7 +637,7 @@ button.twitter-intent {
 
 .modal-window {
   background-color: #fff;
-  border-top: 5px solid #982a29;
+  border-top: 5px solid #4c868f;
   height: 100%;
   overflow: auto;
   padding: 32px;
