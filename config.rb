@@ -44,3 +44,11 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+configure :development do
+  activate :dotenv, env: '.env.development'
+end
+
+configure :production do
+  activate :dotenv, env: '.env.production'
+end

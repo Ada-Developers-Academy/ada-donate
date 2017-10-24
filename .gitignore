@@ -41,7 +41,10 @@ Temporary Items
 /tmp/
 
 # Used by dotenv library to load environment variables.
-# .env
+.env
+.env.development
+.env.test
+.env.production
 
 ## Specific to RubyMotion:
 .dat*
