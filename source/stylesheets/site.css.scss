@@ -394,6 +394,16 @@ button {
   border: none
 }
 
+.button-lg {
+  background-color: #4c868f;
+  border-radius: 5px;
+  padding: .3em .8em;
+  color: #fff;
+  font-size: 3em;
+  cursor: pointer;
+  border: none
+}
+
 .button.facebook-share,
 a.button.facebook-share,
 button.facebook-share {
