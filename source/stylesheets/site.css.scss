@@ -378,8 +378,31 @@ a:hover {
 }
 
 .presidents-wrapper .logo-wrapper .logo {
-  max-width: 300px;
   width: 50%;
+}
+
+@media (max-width:399px) {
+  .presidents-wrapper .logo-wrapper .logo {
+    max-width: 200px;
+  }
+}
+
+@media (min-width:400px) {
+  .presidents-wrapper .logo-wrapper .logo {
+    max-width: 300px;
+  }
+}
+
+@media (min-width:700px) {
+  .presidents-wrapper .logo-wrapper .logo {
+    max-width: 400px;
+  }
+}
+
+@media (min-width:1000px) {
+  .presidents-wrapper .logo-wrapper .logo {
+    max-width: 500px;
+  }
 }
 
 .presidents-wrapper .logo-wrapper .donation-button {
