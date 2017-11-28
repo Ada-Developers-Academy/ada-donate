@@ -365,6 +365,12 @@ a:hover {
   margin: 0 auto
 }
 
+.presidents-wrapper .logo-wrapper .logo-container {
+  width: 100%;
+  position: absolute;
+  background: #efefef;
+}
+
 .presidents-wrapper .logo-wrapper .logo-and-donations {
   width: 100%;
   position: absolute;
@@ -374,8 +380,6 @@ a:hover {
 .presidents-wrapper .logo-wrapper .logo {
   max-width: 300px;
   width: 50%;
-  -webkit-filter: drop-shadow(0 0 9px #000);
-  filter: drop-shadow(0 0 9px #000)
 }
 
 .presidents-wrapper .logo-wrapper .donation-button {
