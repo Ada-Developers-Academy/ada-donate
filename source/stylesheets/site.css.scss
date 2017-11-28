@@ -4,6 +4,11 @@ a:visited {
   color: #033A76
 }
 
+a.button:visited,
+a.button-lg:visited {
+  color: #fff;
+}
+
 @font-face {
   font-family: Roboto;
   src: url(/fonts/roboto.woff2) format("woff2"), url(/fonts/roboto.woff) format("woff");
@@ -342,10 +347,7 @@ a:hover {
     margin-top: 0
   }
   .donations .video-container {
-    width: 500px;
-    float: left;
     padding-bottom: 76px;
-    margin-top: 102px
   }
 }
 
@@ -393,6 +395,16 @@ button {
   padding: .3em .8em;
   color: #fff;
   font-size: 1.3em;
+  cursor: pointer;
+  border: none
+}
+
+.button-lg {
+  background-color: #4c868f;
+  border-radius: 5px;
+  padding: .3em .8em;
+  color: #fff;
+  font-size: 3em;
   cursor: pointer;
   border: none
 }
@@ -584,10 +596,6 @@ button.twitter-intent {
 
 .social-buttons {
   text-align: center
-}
-
-.social-buttons>a {
-  margin-right: 1em
 }
 
 .social-buttons .twitter-intent img {
