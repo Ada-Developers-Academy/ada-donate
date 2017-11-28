@@ -5,7 +5,11 @@ a:visited {
 }
 
 a.button:visited,
-a.button-lg:visited {
+a.button-lg:visited,
+a.button:hover,
+a.button-lg:hover,
+a.button:focus,
+a.button-lg:focus {
   color: #fff;
 }
 
