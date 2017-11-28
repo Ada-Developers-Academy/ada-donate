@@ -16,17 +16,13 @@
   <meta content="Donate to Ada Loan Fund" name="twitter:title">
   <meta content="Ada Developers Academy is designed to increase the number of underrepresented skilled software developers while redefining and reinventing the way we prepare individuals to be successful. Our Ada Loan Fund allows applicants access to low interest loans to help with living expenses during the program. Donate today." name="twitter:description">
   <meta content="https://adaloanfund.org/images/social/ada-donate_share_1200.jpg" name="twitter:image">
-  <script>
-  var OneAmericaSettngs = {
-  'stripe_api_url':'https://backend.oneamericaappeal.org/donate',
-  'stripe_api_pub_key': 'pk_live_9EbtgYUT8Hi35pVBgnU1ZFD6'
-  };
-  </script>
   <%= stylesheet_link_tag "site" %>
-  <script src="https://checkout.stripe.com/checkout.js"></script>
 </head>
 <body>
   <%= yield %>
-  <%= javascript_include_tag "site" %>
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" %>
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.9.1/jarallax.min.js" %>
+  <%= javascript_include_tag "menu-mobile" %>
+  <%= javascript_include_tag "jarallax" %>
 </body>
 </html>
