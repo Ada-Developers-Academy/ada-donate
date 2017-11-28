@@ -4,6 +4,11 @@ a:visited {
   color: #033A76
 }
 
+a.button:visited,
+a.button-lg:visited {
+  color: #fff;
+}
+
 @font-face {
   font-family: Roboto;
   src: url(/fonts/roboto.woff2) format("woff2"), url(/fonts/roboto.woff) format("woff");
