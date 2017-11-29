@@ -316,7 +316,8 @@ a:hover {
 }
 
 .donations .video-container {
-  position: relative
+  position: relative;
+  padding-bottom: 30px;
 }
 
 .donations .video-wrapper {
@@ -438,6 +439,12 @@ button {
   font-size: 3em;
   cursor: pointer;
   border: none
+}
+
+@media (max-width:499px) {
+  .button-lg {
+    font-size: 2em;
+  }
 }
 
 .button.facebook-share,
