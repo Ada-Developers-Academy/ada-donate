@@ -4,6 +4,15 @@ a:visited {
   color: #033A76
 }
 
+a.button:visited,
+a.button-lg:visited,
+a.button:hover,
+a.button-lg:hover,
+a.button:focus,
+a.button-lg:focus {
+  color: #fff;
+}
+
 @font-face {
   font-family: Roboto;
   src: url(/fonts/roboto.woff2) format("woff2"), url(/fonts/roboto.woff) format("woff");
@@ -307,7 +316,8 @@ a:hover {
 }
 
 .donations .video-container {
-  position: relative
+  position: relative;
+  padding-bottom: 30px;
 }
 
 .donations .video-wrapper {
@@ -342,10 +352,7 @@ a:hover {
     margin-top: 0
   }
   .donations .video-container {
-    width: 500px;
-    float: left;
     padding-bottom: 76px;
-    margin-top: 102px
   }
 }
 
@@ -359,6 +366,12 @@ a:hover {
   margin: 0 auto
 }
 
+.presidents-wrapper .logo-wrapper .logo-container {
+  width: 100%;
+  position: absolute;
+  background: #efefef;
+}
+
 .presidents-wrapper .logo-wrapper .logo-and-donations {
   width: 100%;
   position: absolute;
@@ -366,10 +379,31 @@ a:hover {
 }
 
 .presidents-wrapper .logo-wrapper .logo {
-  max-width: 300px;
   width: 50%;
-  -webkit-filter: drop-shadow(0 0 9px #000);
-  filter: drop-shadow(0 0 9px #000)
+}
+
+@media (max-width:399px) {
+  .presidents-wrapper .logo-wrapper .logo {
+    max-width: 200px;
+  }
+}
+
+@media (min-width:400px) {
+  .presidents-wrapper .logo-wrapper .logo {
+    max-width: 300px;
+  }
+}
+
+@media (min-width:700px) {
+  .presidents-wrapper .logo-wrapper .logo {
+    max-width: 400px;
+  }
+}
+
+@media (min-width:1000px) {
+  .presidents-wrapper .logo-wrapper .logo {
+    max-width: 500px;
+  }
 }
 
 .presidents-wrapper .logo-wrapper .donation-button {
@@ -379,7 +413,7 @@ a:hover {
   line-height: 1.4em
 }
 
-@media (max-width:677px) {
+@media (max-width:700px) {
   .presidents-wrapper .logo-wrapper .donation-button {
     display: none
   }
@@ -395,6 +429,22 @@ button {
   font-size: 1.3em;
   cursor: pointer;
   border: none
+}
+
+.button-lg {
+  background-color: #4c868f;
+  border-radius: 5px;
+  padding: .3em .8em;
+  color: #fff;
+  font-size: 3em;
+  cursor: pointer;
+  border: none
+}
+
+@media (max-width:499px) {
+  .button-lg {
+    font-size: 2em;
+  }
 }
 
 .button.facebook-share,
@@ -584,10 +634,6 @@ button.twitter-intent {
 
 .social-buttons {
   text-align: center
-}
-
-.social-buttons>a {
-  margin-right: 1em
 }
 
 .social-buttons .twitter-intent img {
