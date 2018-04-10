@@ -10,5 +10,8 @@
 
 ### Dev Deployment (AWS S3)
 * Setup `.env.development` with all environment variables specified in `.env.example`.
-* `bundle exec middleman build`
-* `bundle exec middleman s3_sync`
+* `bundle exec rake deploy:dev`
+
+### Production Deployment (AWS S3)
+* Setup `.env.production` with all environment variables specified in `.env.example`.
+* `bundle exec rake deploy:prod`
